@@ -1,0 +1,15 @@
+/target
+/target/*
+/target
+/classes
+/target
+/.class
+/.classpath
+/.settings
+/.settings/*
+/.surefire
+/bin
+/.class
+/bin/*
+/classes
+/classes/*
