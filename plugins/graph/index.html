@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="KML points" />
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<title>Estrutura para Graphs</title>
+		
+		<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var myFirebaseRef = new Firebase('https://albertocerqueira.firebaseio.com');
+			var vertexRef = myFirebaseRef.child('vertex');
+			var edgeRef   = myFirebaseRef.child('edge');
+	
+			var firstNode = vertexRef.child('my first node');
+			var secondNode = vertexRef.child('my second node');
+			var myLink = edgeRef.child('link from first node to second node');
+	
+			firstNode.set({
+			  color: 'blue',
+			  label: 'I am blue'
+			});
+	
+			secondNode.set({
+			  color: 'red',
+			  label: 'I am red'
+			});
+	
+			myLink.set({
+			  sourceId: 'my first node',
+			  targetId: 'my second node'
+			});
+		</script>
+	</body>
+</html>
